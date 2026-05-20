@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Autenticando…</title>
+  <!--
+    Esta página actúa como redirectUri para el flujo popup de MSAL.
+    No modifiques su contenido a menos que cambies la versión de MSAL.
+  -->
+  <script src="https://alcdn.msauth.net/browser/2.38.3/js/msal-browser.min.js"></script>
+</head>
+<body>
+  <p style="font-family: Segoe UI, sans-serif; color: #605e5c; padding: 24px;">
+    Completando autenticación…
+  </p>
+  <script>
+    // MSAL maneja automáticamente la respuesta del popup cuando se
+    // instancia PublicClientApplication en la página de redirección.
+    // Este bloque inicializa MSAL sin ninguna acción adicional requerida.
+    (async () => {
+      const msalInstance = new msal.PublicClientApplication({
+        auth: {
+          clientId   : '3214aa21-198e-472c-b430-3dbf8d402dd4',   // debe coincidir con taskpane.js
+          redirectUri: window.location.href,
+        }
+      });
+      await msalInstance.initialize();
+      await msalInstance.handleRedirectPromise();
+    })();
+  </script>
+</body>
+</html>
