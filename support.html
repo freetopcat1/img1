@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Usuario - Complemento de Outlook a Microsoft Planner</title>
+    <style>
+        :root {
+            --primary-color: #0078d4; /* Azul Microsoft oficial */
+            --text-color: #242424;
+            --bg-color: #f3f2f1;
+            --card-bg: #ffffff;
+            --border-color: #edebe9;
+        }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: var(--primary-color);
+            font-size: 24px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 18px;
+            color: #323130;
+            margin-top: 30px;
+        }
+        .description {
+            font-size: 15px;
+            color: #605e5c;
+            margin-bottom: 25px;
+        }
+        .steps {
+            list-style: none;
+            padding: 0;
+        }
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #faf9f8;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 4px 4px 0;
+        }
+        .step-number {
+            background: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 13px;
+        }
+        .step-content strong {
+            display: block;
+            color: #323130;
+            margin-bottom: 4px;
+        }
+        .step-content p {
+            margin: 0;
+            color: #4f4c4b;
+            font-size: 14px;
+        }
+        .result-box {
+            background-color: #f3f9fd;
+            border: 1px solid #c7e0f4;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 25px;
+        }
+        .result-box h3 {
+            margin-top: 0;
+            color: #005a9e;
+            font-size: 15px;
+        }
+        .result-box ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+            color: #242424;
+        }
+        .result-box li {
+            margin-bottom: 8px;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #a19f9d;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Manual de Usuario</h1>
+    <p class="description">Este complemento le permite optimizar su flujo de trabajo convirtiendo correos electrónicos recibidos en Outlook en tareas gestionables dentro de Microsoft Planner en unos pocos clics.</p>
+
+    <h2>Pasos para usar el complemento:</h2>
+    <ol class="steps">
+        <li class="step-item">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <strong>Selección del Grupo Propietario</strong>
+                <p>Al abrir el panel del complemento, la aplicación identificará sus permisos y le mostrará un despliegue con los grupos de usuarios de los cuales usted es propietario o responsable.</p>
+            </div>
+        </li>
+        <li class="step-item">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <strong>Selección del Miembro del Equipo</strong>
+                <p>Una vez elegido el grupo, se habilitará la lista de los miembros del equipo de trabajo vinculados. Seleccione a la persona a la cual se le asignará la tarea en Planner.</p>
+            </div>
+        </li>
+        <li class="step-item">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <strong>Agregar Observación Inicial</strong>
+                <p>Utilice el campo de texto "Observación Inicial Adicional" para añadir detalles, instrucciones específicas o comentarios que complementen la información del correo.</p>
+            </div>
+        </li>
+        <li class="step-item">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <strong>Enviar Solicitud</strong>
+                <p>Revise los datos seleccionados y presione el botón "Enviar" para iniciar el proceso de automatización en segundo plano.</p>
+            </div>
+        </li>
+    </ol>
+
+    <div class="result-box">
+        <h3>¿Qué sucede después de enviar?</h3>
+        <ul>
+            <li><strong>Notificación por correo:</strong> El miembro del equipo seleccionado recibirá una notificación automática por correo electrónico informándole sobre la nueva asignación.</li>
+            <li><strong>Creación en Microsoft Planner:</strong> Se generará una nueva tarea en el tablero correspondiente, la cual incluirá de forma íntegra el cuerpo del correo electrónico original y todos sus archivos adjuntos.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Soporte Técnico de Complementos de Organización Interna &copy; 2026</p>
+    </footer>
+</div>
+
+</body>
+</html>
