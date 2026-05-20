@@ -1,0 +1,29 @@
+{
+  "name": "outlook-planner-addin",
+  "version": "1.0.0",
+  "description": "Outlook Add-in para crear tareas en Microsoft Planner desde correos electrónicos",
+  "scripts": {
+    "start": "office-addin-dev-certs install --days 365 && http-server . --ssl --cert .office-addin-dev-certs/localhost.crt --key .office-addin-dev-certs/localhost.key --port 3000 --cors",
+    "start:simple": "http-server . --port 3000 --cors",
+    "validate": "office-addin-manifest validate manifest.xml",
+    "sideload": "office-addin-debugging start manifest.xml desktop --app outlook"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "office-addin-dev-certs": "^1.12.0",
+    "office-addin-manifest": "^1.13.6",
+    "office-addin-debugging": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "outlook",
+    "office-addin",
+    "planner",
+    "microsoft-graph"
+  ],
+  "license": "MIT",
+  "main": "server.js",
+  "author": ""
+}
